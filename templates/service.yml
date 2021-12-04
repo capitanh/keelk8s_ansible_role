@@ -8,6 +8,6 @@ spec:
   selector:
     app: keel
   ports:
-    - port: "{{keel_port}}"
-      targetPort: "{{keel_port}}"
+    - port: {{keel_port}}
+      targetPort: {{keel_port}}
       nodePort: 30005
