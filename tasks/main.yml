@@ -1,0 +1,27 @@
+---
+- name: Install requrided pakages
+  apt:
+    name:
+      - pip
+
+- name: Install pip packages
+  pip:
+    name:
+      - kubernetes
+      
+- name: Create k8s resources
+  kubernetes.core.k8s:
+    template:
+    - service.yml
+  become_user: "{{admin_user}}"
+
+- name: Install keel helm chart
+  kubernetes.core.helm:
+    release_name: keel
+    chart_ref: keel/keel
+    chart_repo_url: https://charts.keel.sh
+    release_namespace: kube-system
+    wait: yes
+    values_files:
+      - /tmp/keel_values.yml
+  become_user: "{{admin_user}}"
