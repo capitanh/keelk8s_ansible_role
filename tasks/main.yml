@@ -18,7 +18,7 @@
 - name: Install keel helm chart
   kubernetes.core.helm:
     release_name: keel
-    chart_ref: keel/keel
+    chart_ref: keel
     chart_repo_url: https://charts.keel.sh
     release_namespace: kube-system
     wait: yes
