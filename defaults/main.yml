@@ -3,3 +3,8 @@ keel_port:                9300                        # External port of the k8s
 keel_user:                admin                       # Keel dashboard user name
 keel_password:                                        # Keel dashobard user password (possibly kept in ansible vault)
 keel_node_port:                                       # External port for k8s service
+
+# AWS - Only used if ecr.enabled is 'true' in keel_values.yml
+aws_accessKey:
+aws_secretAccessKey:
+aws_region:
