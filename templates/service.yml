@@ -10,4 +10,4 @@ spec:
   ports:
     - port: {{keel_port}}
       targetPort: {{keel_port}}
-      nodePort: 30005
+      nodePort: {{keel_node_port}}

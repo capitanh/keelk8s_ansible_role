@@ -12,9 +12,11 @@ Role Variables
 Tne variables required by this role are:
 ```yaml
 # General
+admin_user:                                           # User with kubectl configured
 keel_port:                9300                        # External port of the k8s NodePort service
 keel_user:                admin                       # Keel dashboard user name
-keel_password:            admin                       # Keel dashobard user password (possibly kept in ansible vault)
+keel_password:                                        # Keel dashobard user password (possibly kept in ansible vault)
+keel_node_port:                                       # External port for k8s service
 ```
 
 Dependencies
